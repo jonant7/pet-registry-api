@@ -1,0 +1,276 @@
+{
+  "info": {
+    "name": "PetRegistry API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register Pet - Firulais",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Firulais\",\n  \"age\": 3,\n  \"address\": \"Av. Siempre Viva 123\",\n  \"city\": \"Quito\",\n  \"breedId\": \"1\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/pets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register Pet - Rocky",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Rocky\",\n  \"age\": 5,\n  \"address\": \"Calle Falsa 456\",\n  \"city\": \"Guayaquil\",\n  \"breedId\": \"2\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/pets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register Pet - Scooby Doo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Rocky\",\n  \"age\": 5,\n  \"address\": \"Calle Falsa 456\",\n  \"city\": \"Guayaquil\",\n  \"breedId\": \"2\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/pets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register Pet - Snoppy",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Rocky\",\n  \"age\": 5,\n  \"address\": \"Calle Falsa 456\",\n  \"city\": \"Guayaquil\",\n  \"breedId\": \"2\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/pets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Pets - All",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/pets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Pets - Filter by breedGroup (Toy)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/pets?breedGroup=Toy",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "breedGroup",
+              "value": "Toy"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Pets - Filter by breedId (124)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/pets?breedId=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "breedId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Pets - Filter by Age Range (minAge=2, maxAge=5)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/pets?minAge=2&maxAge=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "minAge",
+              "value": "2"
+            },
+            {
+              "key": "maxAge",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Pets - Filter by Weight Range (minWeight=3.0, maxWeight=8.0)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/pets?minWeight=3.0&maxWeight=8.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "minWeight",
+              "value": "3.0"
+            },
+            {
+              "key": "maxWeight",
+              "value": "8.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Pets - Filter by Height Range (minHeight=20, maxHeight=40)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/pets?minHeight=20&maxHeight=40",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "minHeight",
+              "value": "20"
+            },
+            {
+              "key": "maxHeight",
+              "value": "40"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
