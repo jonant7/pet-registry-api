@@ -1,5 +1,7 @@
 package com.example.petregistry.common.exception;
 
+import com.example.petregistry.breed.domain.BreedNotFoundException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -32,6 +34,11 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleGeneric(Exception ex) {
         ErrorResponse body = new ErrorResponse(500, "Internal server error");
         return ResponseEntity.status(500).body(body);
+    }
+
+    @ExceptionHandler(BreedNotFoundException.class)
+    public ResponseEntity<String> handleBreedNotFound(BreedNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
 
     private static class ErrorResponse {
